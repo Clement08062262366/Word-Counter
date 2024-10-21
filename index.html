@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="counter.css">
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center;" class="counter">
+        <div class="title">
+            <h1>WORD COUNTER</h1>
+            <p>Type or paste text in the box below to check or count your words (drag to increase box)</p>
+        </div>
+        <textarea id="charact" value="" onkeyup="checkWords()" autofocus></textarea>
+        <!-- <input type="text" id="yut"> -->
+        <p class="count"><code id="num">0</code>words</p>
+    </div>
+
+    <script>
+        var namee = "Joshua"
+
+
+        console.log(namee.length)
+        console.log(namee.indexOf('0'))
+        console.log(namee.charAt(4))
+
+        function checkWords() {
+            let characters = charact.value
+            console.log(charact.value.length)
+            console.log(charact.value.trim('').split(' ').length)
+            num.innerHTML = charact.value.trim('').split(' ').length;
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
